@@ -1,0 +1,1688 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A3 16535 11693
+encoding utf-8
+Sheet 1 1
+Title "RELAY Shield for Raspberry Pi"
+Date ""
+Rev ""
+Comp "Sawadogo Ousseni design"
+Comment1 "SiteWeb: https://www.oussenisawadogo.me"
+Comment2 "Linkdin : https://www.linkedin.com/in/ousseni-sawadogo-a59099140/"
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Connector:Raspberry_Pi_2_3 J3
+U 1 1 5EA6634A
+P 3350 3300
+F 0 "J3" H 3350 4781 50  0000 C CNN
+F 1 "Raspberry_Pi_2_3" H 3350 4690 50  0000 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_2x20_P2.54mm_Vertical" H 3350 3300 50  0001 C CNN
+F 3 "https://www.raspberrypi.org/documentation/hardware/raspberrypi/schematics/rpi_SCH_3bplus_1p0_reduced.pdf" H 3350 3300 50  0001 C CNN
+	1    3350 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Relay:SANYOU_SRD_Form_C K2
+U 1 1 5EA67912
+P 7600 1550
+F 0 "K2" H 8030 1596 50  0000 L CNN
+F 1 "SANYOU_SRD_Form_C" H 8030 1505 50  0000 L CNN
+F 2 "Relay_THT:Relay_SPDT_SANYOU_SRD_Series_Form_C" H 8050 1500 50  0001 L CNN
+F 3 "http://www.sanyourelay.ca/public/products/pdf/SRD.pdf" H 7600 1550 50  0001 C CNN
+	1    7600 1550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7800 1850 7800 1950
+Wire Wire Line
+	7800 1950 8300 1950
+Wire Wire Line
+	8300 1950 8300 1350
+Wire Wire Line
+	7700 1250 7700 1150
+$Comp
+L Device:R R2
+U 1 1 5EA6EF10
+P 5900 1750
+F 0 "R2" H 5970 1796 50  0000 L CNN
+F 1 "220R" H 5970 1705 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 5830 1750 50  0001 C CNN
+F 3 "~" H 5900 1750 50  0001 C CNN
+	1    5900 1750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5900 1900 5900 2000
+Wire Wire Line
+	5900 2000 6000 2000
+$Comp
+L Transistor_BJT:PZT3904 Q2
+U 1 1 5EA70879
+P 7300 2200
+F 0 "Q2" H 7490 2246 50  0000 L CNN
+F 1 "PZT3904" H 7490 2155 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-223" H 7500 2125 50  0001 L CIN
+F 3 "https://www.fairchildsemi.com/datasheets/2N/2N3904.pdf" H 7300 2200 50  0001 L CNN
+	1    7300 2200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR05
+U 1 1 5EA7168D
+P 5800 2400
+F 0 "#PWR05" H 5800 2150 50  0001 C CNN
+F 1 "GND" H 5805 2227 50  0000 C CNN
+F 2 "" H 5800 2400 50  0001 C CNN
+F 3 "" H 5800 2400 50  0001 C CNN
+	1    5800 2400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5800 2400 5800 2350
+Wire Wire Line
+	5800 2200 6000 2200
+Text GLabel 5450 1500 0    39   Input ~ 0
+RL1
+Wire Wire Line
+	5900 1500 5900 1600
+$Comp
+L Device:R R4
+U 1 1 5EA7562C
+P 6850 2200
+F 0 "R4" V 7057 2200 50  0000 C CNN
+F 1 "12K" V 6966 2200 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 6780 2200 50  0001 C CNN
+F 3 "~" H 6850 2200 50  0001 C CNN
+	1    6850 2200
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6700 2200 6600 2200
+Wire Wire Line
+	7100 2200 7000 2200
+$Comp
+L power:GND #PWR07
+U 1 1 5EA7BF8B
+P 7400 2500
+F 0 "#PWR07" H 7400 2250 50  0001 C CNN
+F 1 "GND" H 7405 2327 50  0000 C CNN
+F 2 "" H 7400 2500 50  0001 C CNN
+F 3 "" H 7400 2500 50  0001 C CNN
+	1    7400 2500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7400 2500 7400 2400
+Wire Wire Line
+	7400 1850 7400 1900
+$Comp
+L power:+5V #PWR02
+U 1 1 5EA7CDD1
+P 7400 1050
+F 0 "#PWR02" H 7400 900 50  0001 C CNN
+F 1 "+5V" H 7415 1223 50  0000 C CNN
+F 2 "" H 7400 1050 50  0001 C CNN
+F 3 "" H 7400 1050 50  0001 C CNN
+	1    7400 1050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7400 1050 7400 1150
+$Comp
+L Diode:1N4148W D2
+U 1 1 5EA7EBF1
+P 6950 1550
+F 0 "D2" V 6996 1470 50  0000 R CNN
+F 1 "1N4148W" V 6900 1900 50  0000 R CNN
+F 2 "Diode_SMD:D_SOD-123" H 6950 1375 50  0001 C CNN
+F 3 "https://www.vishay.com/docs/85748/1n4148w.pdf" H 6950 1550 50  0001 C CNN
+	1    6950 1550
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6950 1400 6950 1150
+Wire Wire Line
+	6950 1150 7400 1150
+Connection ~ 7400 1150
+Wire Wire Line
+	7400 1150 7400 1250
+Wire Wire Line
+	6950 1700 6950 1900
+Wire Wire Line
+	6950 1900 7400 1900
+Connection ~ 7400 1900
+Wire Wire Line
+	7400 1900 7400 2000
+$Comp
+L Connector:Conn_01x03_Female J2
+U 1 1 5EA801D3
+P 8900 1350
+F 0 "J2" H 8928 1376 50  0000 L CNN
+F 1 "Conn_01x03_Female" H 8928 1285 50  0000 L CNN
+F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_PT-1,5-3-5.0-H_1x03_P5.00mm_Horizontal" H 8900 1350 50  0001 C CNN
+F 3 "~" H 8900 1350 50  0001 C CNN
+	1    8900 1350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8300 1350 8700 1350
+$Comp
+L Isolator:PC817 U2
+U 1 1 5EA822C9
+P 6300 2100
+F 0 "U2" H 6300 2425 50  0000 C CNN
+F 1 "PC817" H 6300 2334 50  0000 C CNN
+F 2 "Package_DIP:DIP-4_W7.62mm" H 6100 1900 50  0001 L CIN
+F 3 "http://www.soselectronic.cz/a_info/resource/d/pc817.pdf" H 6300 2100 50  0001 L CNN
+	1    6300 2100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6600 2000 6650 2000
+Wire Wire Line
+	6650 2000 6650 1150
+Wire Wire Line
+	6650 1150 6950 1150
+Connection ~ 6950 1150
+$Comp
+L power:+5V #PWR03
+U 1 1 5EA84319
+P 3150 1900
+F 0 "#PWR03" H 3150 1750 50  0001 C CNN
+F 1 "+5V" H 3165 2073 50  0000 C CNN
+F 2 "" H 3150 1900 50  0001 C CNN
+F 3 "" H 3150 1900 50  0001 C CNN
+	1    3150 1900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3150 2000 3150 1950
+Wire Wire Line
+	3250 2000 3250 1950
+Wire Wire Line
+	3250 1950 3150 1950
+Connection ~ 3150 1950
+Wire Wire Line
+	3150 1950 3150 1900
+$Comp
+L power:GND #PWR014
+U 1 1 5EA85C99
+P 2950 4700
+F 0 "#PWR014" H 2950 4450 50  0001 C CNN
+F 1 "GND" H 2955 4527 50  0000 C CNN
+F 2 "" H 2950 4700 50  0001 C CNN
+F 3 "" H 2950 4700 50  0001 C CNN
+	1    2950 4700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2950 4700 2950 4600
+$Comp
+L Device:LED D4
+U 1 1 5EA86E43
+P 5550 2050
+F 0 "D4" V 5589 1933 50  0000 R CNN
+F 1 "LED" V 5498 1933 50  0000 R CNN
+F 2 "LED_SMD:LED_0805_2012Metric" H 5550 2050 50  0001 C CNN
+F 3 "~" H 5550 2050 50  0001 C CNN
+	1    5550 2050
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5550 2200 5550 2350
+Wire Wire Line
+	5550 2350 5800 2350
+Connection ~ 5800 2350
+Wire Wire Line
+	5800 2350 5800 2200
+Wire Wire Line
+	5550 1500 5550 1900
+Wire Wire Line
+	5550 1500 5900 1500
+Wire Wire Line
+	5450 1500 5550 1500
+Connection ~ 5550 1500
+$Comp
+L Relay:SANYOU_SRD_Form_C K4
+U 1 1 5EA8F378
+P 7550 3650
+F 0 "K4" H 7980 3696 50  0000 L CNN
+F 1 "SANYOU_SRD_Form_C" H 7980 3605 50  0000 L CNN
+F 2 "Relay_THT:Relay_SPDT_SANYOU_SRD_Series_Form_C" H 8000 3600 50  0001 L CNN
+F 3 "http://www.sanyourelay.ca/public/products/pdf/SRD.pdf" H 7550 3650 50  0001 C CNN
+	1    7550 3650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7750 3950 7750 4050
+Wire Wire Line
+	7750 4050 8250 4050
+Wire Wire Line
+	8250 4050 8250 3450
+Wire Wire Line
+	7650 3350 7650 3250
+$Comp
+L Device:R R6
+U 1 1 5EA8F38A
+P 5850 3850
+F 0 "R6" H 5920 3896 50  0000 L CNN
+F 1 "220R" H 5920 3805 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 5780 3850 50  0001 C CNN
+F 3 "~" H 5850 3850 50  0001 C CNN
+	1    5850 3850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5850 4000 5850 4100
+Wire Wire Line
+	5850 4100 5950 4100
+$Comp
+L Transistor_BJT:PZT3904 Q4
+U 1 1 5EA8F396
+P 7250 4300
+F 0 "Q4" H 7440 4346 50  0000 L CNN
+F 1 "PZT3904" H 7440 4255 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-223" H 7450 4225 50  0001 L CIN
+F 3 "https://www.fairchildsemi.com/datasheets/2N/2N3904.pdf" H 7250 4300 50  0001 L CNN
+	1    7250 4300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR011
+U 1 1 5EA8F3A0
+P 5750 4500
+F 0 "#PWR011" H 5750 4250 50  0001 C CNN
+F 1 "GND" H 5755 4327 50  0000 C CNN
+F 2 "" H 5750 4500 50  0001 C CNN
+F 3 "" H 5750 4500 50  0001 C CNN
+	1    5750 4500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5750 4500 5750 4450
+Wire Wire Line
+	5750 4300 5950 4300
+Text GLabel 5400 3600 0    39   Input ~ 0
+RL3
+Wire Wire Line
+	5850 3600 5850 3700
+$Comp
+L Device:R R8
+U 1 1 5EA8F3AE
+P 6800 4300
+F 0 "R8" V 7007 4300 50  0000 C CNN
+F 1 "12K" V 6916 4300 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 6730 4300 50  0001 C CNN
+F 3 "~" H 6800 4300 50  0001 C CNN
+	1    6800 4300
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6650 4300 6550 4300
+Wire Wire Line
+	7050 4300 6950 4300
+$Comp
+L power:GND #PWR013
+U 1 1 5EA8F3BA
+P 7350 4600
+F 0 "#PWR013" H 7350 4350 50  0001 C CNN
+F 1 "GND" H 7355 4427 50  0000 C CNN
+F 2 "" H 7350 4600 50  0001 C CNN
+F 3 "" H 7350 4600 50  0001 C CNN
+	1    7350 4600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7350 4600 7350 4500
+Wire Wire Line
+	7350 3950 7350 4000
+$Comp
+L power:+5V #PWR09
+U 1 1 5EA8F3C6
+P 7350 3150
+F 0 "#PWR09" H 7350 3000 50  0001 C CNN
+F 1 "+5V" H 7365 3323 50  0000 C CNN
+F 2 "" H 7350 3150 50  0001 C CNN
+F 3 "" H 7350 3150 50  0001 C CNN
+	1    7350 3150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7350 3150 7350 3250
+$Comp
+L Diode:1N4148W D6
+U 1 1 5EA8F3D1
+P 6900 3650
+F 0 "D6" V 6946 3570 50  0000 R CNN
+F 1 "1N4148W" V 6850 4000 50  0000 R CNN
+F 2 "Diode_SMD:D_SOD-123" H 6900 3475 50  0001 C CNN
+F 3 "https://www.vishay.com/docs/85748/1n4148w.pdf" H 6900 3650 50  0001 C CNN
+	1    6900 3650
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6900 3500 6900 3250
+Wire Wire Line
+	6900 3250 7350 3250
+Connection ~ 7350 3250
+Wire Wire Line
+	7350 3250 7350 3350
+Wire Wire Line
+	6900 3800 6900 4000
+Wire Wire Line
+	6900 4000 7350 4000
+Connection ~ 7350 4000
+Wire Wire Line
+	7350 4000 7350 4100
+$Comp
+L Connector:Conn_01x03_Female J5
+U 1 1 5EA8F3E3
+P 8850 3450
+F 0 "J5" H 8878 3476 50  0000 L CNN
+F 1 "Conn_01x03_Female" H 8878 3385 50  0000 L CNN
+F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_PT-1,5-3-5.0-H_1x03_P5.00mm_Horizontal" H 8850 3450 50  0001 C CNN
+F 3 "~" H 8850 3450 50  0001 C CNN
+	1    8850 3450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8250 3450 8650 3450
+$Comp
+L Isolator:PC817 U4
+U 1 1 5EA8F3F0
+P 6250 4200
+F 0 "U4" H 6250 4525 50  0000 C CNN
+F 1 "PC817" H 6250 4434 50  0000 C CNN
+F 2 "Package_DIP:DIP-4_W7.62mm" H 6050 4000 50  0001 L CIN
+F 3 "http://www.soselectronic.cz/a_info/resource/d/pc817.pdf" H 6250 4200 50  0001 L CNN
+	1    6250 4200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6550 4100 6600 4100
+Wire Wire Line
+	6600 4100 6600 3250
+Wire Wire Line
+	6600 3250 6900 3250
+Connection ~ 6900 3250
+$Comp
+L Device:LED D8
+U 1 1 5EA8F3FE
+P 5500 4150
+F 0 "D8" V 5539 4033 50  0000 R CNN
+F 1 "LED" V 5448 4033 50  0000 R CNN
+F 2 "LED_SMD:LED_0805_2012Metric" H 5500 4150 50  0001 C CNN
+F 3 "~" H 5500 4150 50  0001 C CNN
+	1    5500 4150
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5500 4300 5500 4450
+Wire Wire Line
+	5500 4450 5750 4450
+Connection ~ 5750 4450
+Wire Wire Line
+	5750 4450 5750 4300
+Wire Wire Line
+	5500 3600 5500 4000
+Wire Wire Line
+	5500 3600 5850 3600
+Wire Wire Line
+	5400 3600 5500 3600
+Connection ~ 5500 3600
+$Comp
+L Relay:SANYOU_SRD_Form_C K6
+U 1 1 5EAB2082
+P 7550 5700
+F 0 "K6" H 7980 5746 50  0000 L CNN
+F 1 "SANYOU_SRD_Form_C" H 7980 5655 50  0000 L CNN
+F 2 "Relay_THT:Relay_SPDT_SANYOU_SRD_Series_Form_C" H 8000 5650 50  0001 L CNN
+F 3 "http://www.sanyourelay.ca/public/products/pdf/SRD.pdf" H 7550 5700 50  0001 C CNN
+	1    7550 5700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7750 6000 7750 6100
+Wire Wire Line
+	7750 6100 8250 6100
+Wire Wire Line
+	8250 6100 8250 5500
+Wire Wire Line
+	7650 5400 7650 5300
+$Comp
+L Device:R R10
+U 1 1 5EAB2094
+P 5850 5900
+F 0 "R10" H 5920 5946 50  0000 L CNN
+F 1 "220R" H 5920 5855 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 5780 5900 50  0001 C CNN
+F 3 "~" H 5850 5900 50  0001 C CNN
+	1    5850 5900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5850 6050 5850 6150
+Wire Wire Line
+	5850 6150 5950 6150
+$Comp
+L Transistor_BJT:PZT3904 Q6
+U 1 1 5EAB20A0
+P 7250 6350
+F 0 "Q6" H 7440 6396 50  0000 L CNN
+F 1 "PZT3904" H 7440 6305 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-223" H 7450 6275 50  0001 L CIN
+F 3 "https://www.fairchildsemi.com/datasheets/2N/2N3904.pdf" H 7250 6350 50  0001 L CNN
+	1    7250 6350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR018
+U 1 1 5EAB20AA
+P 5750 6550
+F 0 "#PWR018" H 5750 6300 50  0001 C CNN
+F 1 "GND" H 5755 6377 50  0000 C CNN
+F 2 "" H 5750 6550 50  0001 C CNN
+F 3 "" H 5750 6550 50  0001 C CNN
+	1    5750 6550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5750 6550 5750 6500
+Wire Wire Line
+	5750 6350 5950 6350
+Text GLabel 5400 5650 0    39   Input ~ 0
+RL5
+Wire Wire Line
+	5850 5650 5850 5750
+$Comp
+L Device:R R12
+U 1 1 5EAB20B8
+P 6800 6350
+F 0 "R12" V 7007 6350 50  0000 C CNN
+F 1 "12K" V 6916 6350 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 6730 6350 50  0001 C CNN
+F 3 "~" H 6800 6350 50  0001 C CNN
+	1    6800 6350
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6650 6350 6550 6350
+Wire Wire Line
+	7050 6350 6950 6350
+$Comp
+L power:GND #PWR020
+U 1 1 5EAB20C4
+P 7350 6650
+F 0 "#PWR020" H 7350 6400 50  0001 C CNN
+F 1 "GND" H 7355 6477 50  0000 C CNN
+F 2 "" H 7350 6650 50  0001 C CNN
+F 3 "" H 7350 6650 50  0001 C CNN
+	1    7350 6650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7350 6650 7350 6550
+Wire Wire Line
+	7350 6000 7350 6050
+$Comp
+L power:+5V #PWR016
+U 1 1 5EAB20D0
+P 7350 5200
+F 0 "#PWR016" H 7350 5050 50  0001 C CNN
+F 1 "+5V" H 7365 5373 50  0000 C CNN
+F 2 "" H 7350 5200 50  0001 C CNN
+F 3 "" H 7350 5200 50  0001 C CNN
+	1    7350 5200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7350 5200 7350 5300
+$Comp
+L Diode:1N4148W D10
+U 1 1 5EAB20DB
+P 6900 5700
+F 0 "D10" V 6946 5620 50  0000 R CNN
+F 1 "1N4148W" V 6850 6050 50  0000 R CNN
+F 2 "Diode_SMD:D_SOD-123" H 6900 5525 50  0001 C CNN
+F 3 "https://www.vishay.com/docs/85748/1n4148w.pdf" H 6900 5700 50  0001 C CNN
+	1    6900 5700
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6900 5550 6900 5300
+Wire Wire Line
+	6900 5300 7350 5300
+Connection ~ 7350 5300
+Wire Wire Line
+	7350 5300 7350 5400
+Wire Wire Line
+	6900 5850 6900 6050
+Wire Wire Line
+	6900 6050 7350 6050
+Connection ~ 7350 6050
+Wire Wire Line
+	7350 6050 7350 6150
+$Comp
+L Connector:Conn_01x03_Female J7
+U 1 1 5EAB20ED
+P 8850 5500
+F 0 "J7" H 8878 5526 50  0000 L CNN
+F 1 "Conn_01x03_Female" H 8878 5435 50  0000 L CNN
+F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_PT-1,5-3-5.0-H_1x03_P5.00mm_Horizontal" H 8850 5500 50  0001 C CNN
+F 3 "~" H 8850 5500 50  0001 C CNN
+	1    8850 5500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8250 5500 8650 5500
+$Comp
+L Isolator:PC817 U6
+U 1 1 5EAB20FA
+P 6250 6250
+F 0 "U6" H 6250 6575 50  0000 C CNN
+F 1 "PC817" H 6250 6484 50  0000 C CNN
+F 2 "Package_DIP:DIP-4_W7.62mm" H 6050 6050 50  0001 L CIN
+F 3 "http://www.soselectronic.cz/a_info/resource/d/pc817.pdf" H 6250 6250 50  0001 L CNN
+	1    6250 6250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6550 6150 6600 6150
+Wire Wire Line
+	6600 6150 6600 5300
+Wire Wire Line
+	6600 5300 6900 5300
+Connection ~ 6900 5300
+$Comp
+L Device:LED D12
+U 1 1 5EAB2108
+P 5500 6200
+F 0 "D12" V 5539 6083 50  0000 R CNN
+F 1 "LED" V 5448 6083 50  0000 R CNN
+F 2 "LED_SMD:LED_0805_2012Metric" H 5500 6200 50  0001 C CNN
+F 3 "~" H 5500 6200 50  0001 C CNN
+	1    5500 6200
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5500 6350 5500 6500
+Wire Wire Line
+	5500 6500 5750 6500
+Connection ~ 5750 6500
+Wire Wire Line
+	5750 6500 5750 6350
+Wire Wire Line
+	5500 5650 5500 6050
+Wire Wire Line
+	5500 5650 5850 5650
+Wire Wire Line
+	5400 5650 5500 5650
+Connection ~ 5500 5650
+$Comp
+L Relay:SANYOU_SRD_Form_C K8
+U 1 1 5EAD542F
+P 7550 7750
+F 0 "K8" H 7980 7796 50  0000 L CNN
+F 1 "SANYOU_SRD_Form_C" H 7980 7705 50  0000 L CNN
+F 2 "Relay_THT:Relay_SPDT_SANYOU_SRD_Series_Form_C" H 8000 7700 50  0001 L CNN
+F 3 "http://www.sanyourelay.ca/public/products/pdf/SRD.pdf" H 7550 7750 50  0001 C CNN
+	1    7550 7750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7750 8050 7750 8150
+Wire Wire Line
+	7750 8150 8250 8150
+Wire Wire Line
+	8250 8150 8250 7550
+Wire Wire Line
+	7650 7450 7650 7350
+$Comp
+L Device:R R14
+U 1 1 5EAD5441
+P 5850 7950
+F 0 "R14" H 5920 7996 50  0000 L CNN
+F 1 "220R" H 5920 7905 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 5780 7950 50  0001 C CNN
+F 3 "~" H 5850 7950 50  0001 C CNN
+	1    5850 7950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5850 8100 5850 8200
+Wire Wire Line
+	5850 8200 5950 8200
+$Comp
+L Transistor_BJT:PZT3904 Q8
+U 1 1 5EAD544D
+P 7250 8400
+F 0 "Q8" H 7440 8446 50  0000 L CNN
+F 1 "PZT3904" H 7440 8355 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-223" H 7450 8325 50  0001 L CIN
+F 3 "https://www.fairchildsemi.com/datasheets/2N/2N3904.pdf" H 7250 8400 50  0001 L CNN
+	1    7250 8400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR024
+U 1 1 5EAD5457
+P 5750 8600
+F 0 "#PWR024" H 5750 8350 50  0001 C CNN
+F 1 "GND" H 5755 8427 50  0000 C CNN
+F 2 "" H 5750 8600 50  0001 C CNN
+F 3 "" H 5750 8600 50  0001 C CNN
+	1    5750 8600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5750 8600 5750 8550
+Wire Wire Line
+	5750 8400 5950 8400
+Text GLabel 5400 7700 0    39   Input ~ 0
+RL7
+Wire Wire Line
+	5850 7700 5850 7800
+$Comp
+L Device:R R16
+U 1 1 5EAD5465
+P 6800 8400
+F 0 "R16" V 7007 8400 50  0000 C CNN
+F 1 "12K" V 6916 8400 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 6730 8400 50  0001 C CNN
+F 3 "~" H 6800 8400 50  0001 C CNN
+	1    6800 8400
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6650 8400 6550 8400
+Wire Wire Line
+	7050 8400 6950 8400
+$Comp
+L power:GND #PWR026
+U 1 1 5EAD5471
+P 7350 8700
+F 0 "#PWR026" H 7350 8450 50  0001 C CNN
+F 1 "GND" H 7355 8527 50  0000 C CNN
+F 2 "" H 7350 8700 50  0001 C CNN
+F 3 "" H 7350 8700 50  0001 C CNN
+	1    7350 8700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7350 8700 7350 8600
+Wire Wire Line
+	7350 8050 7350 8100
+$Comp
+L power:+5V #PWR022
+U 1 1 5EAD547D
+P 7350 7250
+F 0 "#PWR022" H 7350 7100 50  0001 C CNN
+F 1 "+5V" H 7365 7423 50  0000 C CNN
+F 2 "" H 7350 7250 50  0001 C CNN
+F 3 "" H 7350 7250 50  0001 C CNN
+	1    7350 7250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7350 7250 7350 7350
+$Comp
+L Diode:1N4148W D14
+U 1 1 5EAD5488
+P 6900 7750
+F 0 "D14" V 6946 7670 50  0000 R CNN
+F 1 "1N4148W" V 6850 8100 50  0000 R CNN
+F 2 "Diode_SMD:D_SOD-123" H 6900 7575 50  0001 C CNN
+F 3 "https://www.vishay.com/docs/85748/1n4148w.pdf" H 6900 7750 50  0001 C CNN
+	1    6900 7750
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6900 7600 6900 7350
+Wire Wire Line
+	6900 7350 7350 7350
+Connection ~ 7350 7350
+Wire Wire Line
+	7350 7350 7350 7450
+Wire Wire Line
+	6900 7900 6900 8100
+Wire Wire Line
+	6900 8100 7350 8100
+Connection ~ 7350 8100
+Wire Wire Line
+	7350 8100 7350 8200
+$Comp
+L Connector:Conn_01x03_Female J9
+U 1 1 5EAD549A
+P 8850 7550
+F 0 "J9" H 8878 7576 50  0000 L CNN
+F 1 "Conn_01x03_Female" H 8878 7485 50  0000 L CNN
+F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_PT-1,5-3-5.0-H_1x03_P5.00mm_Horizontal" H 8850 7550 50  0001 C CNN
+F 3 "~" H 8850 7550 50  0001 C CNN
+	1    8850 7550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8250 7550 8650 7550
+$Comp
+L Isolator:PC817 U8
+U 1 1 5EAD54A7
+P 6250 8300
+F 0 "U8" H 6250 8625 50  0000 C CNN
+F 1 "PC817" H 6250 8534 50  0000 C CNN
+F 2 "Package_DIP:DIP-4_W7.62mm" H 6050 8100 50  0001 L CIN
+F 3 "http://www.soselectronic.cz/a_info/resource/d/pc817.pdf" H 6250 8300 50  0001 L CNN
+	1    6250 8300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6550 8200 6600 8200
+Wire Wire Line
+	6600 8200 6600 7350
+Wire Wire Line
+	6600 7350 6900 7350
+Connection ~ 6900 7350
+$Comp
+L Device:LED D16
+U 1 1 5EAD54B5
+P 5500 8250
+F 0 "D16" V 5539 8133 50  0000 R CNN
+F 1 "LED" V 5448 8133 50  0000 R CNN
+F 2 "LED_SMD:LED_0805_2012Metric" H 5500 8250 50  0001 C CNN
+F 3 "~" H 5500 8250 50  0001 C CNN
+	1    5500 8250
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5500 8400 5500 8550
+Wire Wire Line
+	5500 8550 5750 8550
+Connection ~ 5750 8550
+Wire Wire Line
+	5750 8550 5750 8400
+Wire Wire Line
+	5500 7700 5500 8100
+Wire Wire Line
+	5500 7700 5850 7700
+Wire Wire Line
+	5400 7700 5500 7700
+Connection ~ 5500 7700
+$Comp
+L Relay:SANYOU_SRD_Form_C K1
+U 1 1 5EAE2E57
+P 12700 1450
+F 0 "K1" H 13130 1496 50  0000 L CNN
+F 1 "SANYOU_SRD_Form_C" H 13130 1405 50  0000 L CNN
+F 2 "Relay_THT:Relay_SPDT_SANYOU_SRD_Series_Form_C" H 13150 1400 50  0001 L CNN
+F 3 "http://www.sanyourelay.ca/public/products/pdf/SRD.pdf" H 12700 1450 50  0001 C CNN
+	1    12700 1450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	12900 1750 12900 1850
+Wire Wire Line
+	12900 1850 13400 1850
+Wire Wire Line
+	13400 1850 13400 1250
+Wire Wire Line
+	12800 1150 12800 1050
+$Comp
+L Device:R R1
+U 1 1 5EAE2E69
+P 11000 1650
+F 0 "R1" H 11070 1696 50  0000 L CNN
+F 1 "220R" H 11070 1605 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 10930 1650 50  0001 C CNN
+F 3 "~" H 11000 1650 50  0001 C CNN
+	1    11000 1650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	11000 1800 11000 1900
+Wire Wire Line
+	11000 1900 11100 1900
+$Comp
+L Transistor_BJT:PZT3904 Q1
+U 1 1 5EAE2E75
+P 12400 2100
+F 0 "Q1" H 12590 2146 50  0000 L CNN
+F 1 "PZT3904" H 12590 2055 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-223" H 12600 2025 50  0001 L CIN
+F 3 "https://www.fairchildsemi.com/datasheets/2N/2N3904.pdf" H 12400 2100 50  0001 L CNN
+	1    12400 2100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR04
+U 1 1 5EAE2E7F
+P 10900 2300
+F 0 "#PWR04" H 10900 2050 50  0001 C CNN
+F 1 "GND" H 10905 2127 50  0000 C CNN
+F 2 "" H 10900 2300 50  0001 C CNN
+F 3 "" H 10900 2300 50  0001 C CNN
+	1    10900 2300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10900 2300 10900 2250
+Wire Wire Line
+	10900 2100 11100 2100
+Text GLabel 10550 1400 0    39   Input ~ 0
+RL2
+Wire Wire Line
+	11000 1400 11000 1500
+$Comp
+L Device:R R3
+U 1 1 5EAE2E8D
+P 11950 2100
+F 0 "R3" V 12157 2100 50  0000 C CNN
+F 1 "12K" V 12066 2100 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 11880 2100 50  0001 C CNN
+F 3 "~" H 11950 2100 50  0001 C CNN
+	1    11950 2100
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	11800 2100 11700 2100
+Wire Wire Line
+	12200 2100 12100 2100
+$Comp
+L power:GND #PWR06
+U 1 1 5EAE2E99
+P 12500 2400
+F 0 "#PWR06" H 12500 2150 50  0001 C CNN
+F 1 "GND" H 12505 2227 50  0000 C CNN
+F 2 "" H 12500 2400 50  0001 C CNN
+F 3 "" H 12500 2400 50  0001 C CNN
+	1    12500 2400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	12500 2400 12500 2300
+Wire Wire Line
+	12500 1750 12500 1800
+$Comp
+L power:+5V #PWR01
+U 1 1 5EAE2EA5
+P 12500 950
+F 0 "#PWR01" H 12500 800 50  0001 C CNN
+F 1 "+5V" H 12515 1123 50  0000 C CNN
+F 2 "" H 12500 950 50  0001 C CNN
+F 3 "" H 12500 950 50  0001 C CNN
+	1    12500 950 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	12500 950  12500 1050
+$Comp
+L Diode:1N4148W D1
+U 1 1 5EAE2EB0
+P 12050 1450
+F 0 "D1" V 12096 1370 50  0000 R CNN
+F 1 "1N4148W" V 12000 1800 50  0000 R CNN
+F 2 "Diode_SMD:D_SOD-123" H 12050 1275 50  0001 C CNN
+F 3 "https://www.vishay.com/docs/85748/1n4148w.pdf" H 12050 1450 50  0001 C CNN
+	1    12050 1450
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	12050 1300 12050 1050
+Wire Wire Line
+	12050 1050 12500 1050
+Connection ~ 12500 1050
+Wire Wire Line
+	12500 1050 12500 1150
+Wire Wire Line
+	12050 1600 12050 1800
+Wire Wire Line
+	12050 1800 12500 1800
+Connection ~ 12500 1800
+Wire Wire Line
+	12500 1800 12500 1900
+$Comp
+L Connector:Conn_01x03_Female J1
+U 1 1 5EAE2EC2
+P 14000 1250
+F 0 "J1" H 14028 1276 50  0000 L CNN
+F 1 "Conn_01x03_Female" H 14028 1185 50  0000 L CNN
+F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_PT-1,5-3-5.0-H_1x03_P5.00mm_Horizontal" H 14000 1250 50  0001 C CNN
+F 3 "~" H 14000 1250 50  0001 C CNN
+	1    14000 1250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	13400 1250 13800 1250
+$Comp
+L Isolator:PC817 U1
+U 1 1 5EAE2ECF
+P 11400 2000
+F 0 "U1" H 11400 2325 50  0000 C CNN
+F 1 "PC817" H 11400 2234 50  0000 C CNN
+F 2 "Package_DIP:DIP-4_W7.62mm" H 11200 1800 50  0001 L CIN
+F 3 "http://www.soselectronic.cz/a_info/resource/d/pc817.pdf" H 11400 2000 50  0001 L CNN
+	1    11400 2000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	11700 1900 11750 1900
+Wire Wire Line
+	11750 1900 11750 1050
+Wire Wire Line
+	11750 1050 12050 1050
+Connection ~ 12050 1050
+$Comp
+L Device:LED D3
+U 1 1 5EAE2EDD
+P 10650 1950
+F 0 "D3" V 10689 1833 50  0000 R CNN
+F 1 "LED" V 10598 1833 50  0000 R CNN
+F 2 "LED_SMD:LED_0805_2012Metric" H 10650 1950 50  0001 C CNN
+F 3 "~" H 10650 1950 50  0001 C CNN
+	1    10650 1950
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	10650 2100 10650 2250
+Wire Wire Line
+	10650 2250 10900 2250
+Connection ~ 10900 2250
+Wire Wire Line
+	10900 2250 10900 2100
+Wire Wire Line
+	10650 1400 10650 1800
+Wire Wire Line
+	10650 1400 11000 1400
+Wire Wire Line
+	10550 1400 10650 1400
+Connection ~ 10650 1400
+$Comp
+L Relay:SANYOU_SRD_Form_C K3
+U 1 1 5EAE2EEF
+P 12650 3550
+F 0 "K3" H 13080 3596 50  0000 L CNN
+F 1 "SANYOU_SRD_Form_C" H 13080 3505 50  0000 L CNN
+F 2 "Relay_THT:Relay_SPDT_SANYOU_SRD_Series_Form_C" H 13100 3500 50  0001 L CNN
+F 3 "http://www.sanyourelay.ca/public/products/pdf/SRD.pdf" H 12650 3550 50  0001 C CNN
+	1    12650 3550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	12850 3850 12850 3950
+Wire Wire Line
+	12850 3950 13350 3950
+Wire Wire Line
+	13350 3950 13350 3350
+Wire Wire Line
+	12750 3250 12750 3150
+$Comp
+L Device:R R5
+U 1 1 5EAE2F01
+P 10950 3750
+F 0 "R5" H 11020 3796 50  0000 L CNN
+F 1 "220R" H 11020 3705 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 10880 3750 50  0001 C CNN
+F 3 "~" H 10950 3750 50  0001 C CNN
+	1    10950 3750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10950 3900 10950 4000
+Wire Wire Line
+	10950 4000 11050 4000
+$Comp
+L Transistor_BJT:PZT3904 Q3
+U 1 1 5EAE2F0D
+P 12350 4200
+F 0 "Q3" H 12540 4246 50  0000 L CNN
+F 1 "PZT3904" H 12540 4155 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-223" H 12550 4125 50  0001 L CIN
+F 3 "https://www.fairchildsemi.com/datasheets/2N/2N3904.pdf" H 12350 4200 50  0001 L CNN
+	1    12350 4200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR010
+U 1 1 5EAE2F17
+P 10850 4400
+F 0 "#PWR010" H 10850 4150 50  0001 C CNN
+F 1 "GND" H 10855 4227 50  0000 C CNN
+F 2 "" H 10850 4400 50  0001 C CNN
+F 3 "" H 10850 4400 50  0001 C CNN
+	1    10850 4400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10850 4400 10850 4350
+Wire Wire Line
+	10850 4200 11050 4200
+Text GLabel 10500 3500 0    39   Input ~ 0
+RL4
+Wire Wire Line
+	10950 3500 10950 3600
+$Comp
+L Device:R R7
+U 1 1 5EAE2F25
+P 11900 4200
+F 0 "R7" V 12107 4200 50  0000 C CNN
+F 1 "12K" V 12016 4200 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 11830 4200 50  0001 C CNN
+F 3 "~" H 11900 4200 50  0001 C CNN
+	1    11900 4200
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	11750 4200 11650 4200
+Wire Wire Line
+	12150 4200 12050 4200
+$Comp
+L power:GND #PWR012
+U 1 1 5EAE2F31
+P 12450 4500
+F 0 "#PWR012" H 12450 4250 50  0001 C CNN
+F 1 "GND" H 12455 4327 50  0000 C CNN
+F 2 "" H 12450 4500 50  0001 C CNN
+F 3 "" H 12450 4500 50  0001 C CNN
+	1    12450 4500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	12450 4500 12450 4400
+Wire Wire Line
+	12450 3850 12450 3900
+$Comp
+L power:+5V #PWR08
+U 1 1 5EAE2F3D
+P 12450 3050
+F 0 "#PWR08" H 12450 2900 50  0001 C CNN
+F 1 "+5V" H 12465 3223 50  0000 C CNN
+F 2 "" H 12450 3050 50  0001 C CNN
+F 3 "" H 12450 3050 50  0001 C CNN
+	1    12450 3050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	12450 3050 12450 3150
+$Comp
+L Diode:1N4148W D5
+U 1 1 5EAE2F48
+P 12000 3550
+F 0 "D5" V 12046 3470 50  0000 R CNN
+F 1 "1N4148W" V 11950 3900 50  0000 R CNN
+F 2 "Diode_SMD:D_SOD-123" H 12000 3375 50  0001 C CNN
+F 3 "https://www.vishay.com/docs/85748/1n4148w.pdf" H 12000 3550 50  0001 C CNN
+	1    12000 3550
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	12000 3400 12000 3150
+Wire Wire Line
+	12000 3150 12450 3150
+Connection ~ 12450 3150
+Wire Wire Line
+	12450 3150 12450 3250
+Wire Wire Line
+	12000 3700 12000 3900
+Wire Wire Line
+	12000 3900 12450 3900
+Connection ~ 12450 3900
+Wire Wire Line
+	12450 3900 12450 4000
+$Comp
+L Connector:Conn_01x03_Female J4
+U 1 1 5EAE2F5A
+P 13950 3350
+F 0 "J4" H 13978 3376 50  0000 L CNN
+F 1 "Conn_01x03_Female" H 13978 3285 50  0000 L CNN
+F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_PT-1,5-3-5.0-H_1x03_P5.00mm_Horizontal" H 13950 3350 50  0001 C CNN
+F 3 "~" H 13950 3350 50  0001 C CNN
+	1    13950 3350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	13350 3350 13750 3350
+$Comp
+L Isolator:PC817 U3
+U 1 1 5EAE2F67
+P 11350 4100
+F 0 "U3" H 11350 4425 50  0000 C CNN
+F 1 "PC817" H 11350 4334 50  0000 C CNN
+F 2 "Package_DIP:DIP-4_W7.62mm" H 11150 3900 50  0001 L CIN
+F 3 "http://www.soselectronic.cz/a_info/resource/d/pc817.pdf" H 11350 4100 50  0001 L CNN
+	1    11350 4100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	11650 4000 11700 4000
+Wire Wire Line
+	11700 4000 11700 3150
+Wire Wire Line
+	11700 3150 12000 3150
+Connection ~ 12000 3150
+$Comp
+L Device:LED D7
+U 1 1 5EAE2F75
+P 10600 4050
+F 0 "D7" V 10639 3933 50  0000 R CNN
+F 1 "LED" V 10548 3933 50  0000 R CNN
+F 2 "LED_SMD:LED_0805_2012Metric" H 10600 4050 50  0001 C CNN
+F 3 "~" H 10600 4050 50  0001 C CNN
+	1    10600 4050
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	10600 4200 10600 4350
+Wire Wire Line
+	10600 4350 10850 4350
+Connection ~ 10850 4350
+Wire Wire Line
+	10850 4350 10850 4200
+Wire Wire Line
+	10600 3500 10600 3900
+Wire Wire Line
+	10600 3500 10950 3500
+Wire Wire Line
+	10500 3500 10600 3500
+Connection ~ 10600 3500
+$Comp
+L Relay:SANYOU_SRD_Form_C K5
+U 1 1 5EAE2F87
+P 12650 5600
+F 0 "K5" H 13080 5646 50  0000 L CNN
+F 1 "SANYOU_SRD_Form_C" H 13080 5555 50  0000 L CNN
+F 2 "Relay_THT:Relay_SPDT_SANYOU_SRD_Series_Form_C" H 13100 5550 50  0001 L CNN
+F 3 "http://www.sanyourelay.ca/public/products/pdf/SRD.pdf" H 12650 5600 50  0001 C CNN
+	1    12650 5600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	12850 5900 12850 6000
+Wire Wire Line
+	12850 6000 13350 6000
+Wire Wire Line
+	13350 6000 13350 5400
+Wire Wire Line
+	12750 5300 12750 5200
+$Comp
+L Device:R R9
+U 1 1 5EAE2F99
+P 10950 5800
+F 0 "R9" H 11020 5846 50  0000 L CNN
+F 1 "220R" H 11020 5755 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 10880 5800 50  0001 C CNN
+F 3 "~" H 10950 5800 50  0001 C CNN
+	1    10950 5800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10950 5950 10950 6050
+Wire Wire Line
+	10950 6050 11050 6050
+$Comp
+L Transistor_BJT:PZT3904 Q5
+U 1 1 5EAE2FA5
+P 12350 6250
+F 0 "Q5" H 12540 6296 50  0000 L CNN
+F 1 "PZT3904" H 12540 6205 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-223" H 12550 6175 50  0001 L CIN
+F 3 "https://www.fairchildsemi.com/datasheets/2N/2N3904.pdf" H 12350 6250 50  0001 L CNN
+	1    12350 6250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR017
+U 1 1 5EAE2FAF
+P 10850 6450
+F 0 "#PWR017" H 10850 6200 50  0001 C CNN
+F 1 "GND" H 10855 6277 50  0000 C CNN
+F 2 "" H 10850 6450 50  0001 C CNN
+F 3 "" H 10850 6450 50  0001 C CNN
+	1    10850 6450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10850 6450 10850 6400
+Wire Wire Line
+	10850 6250 11050 6250
+Text GLabel 10500 5550 0    39   Input ~ 0
+RL6
+Wire Wire Line
+	10950 5550 10950 5650
+$Comp
+L Device:R R11
+U 1 1 5EAE2FBD
+P 11900 6250
+F 0 "R11" V 12107 6250 50  0000 C CNN
+F 1 "12K" V 12016 6250 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 11830 6250 50  0001 C CNN
+F 3 "~" H 11900 6250 50  0001 C CNN
+	1    11900 6250
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	11750 6250 11650 6250
+Wire Wire Line
+	12150 6250 12050 6250
+$Comp
+L power:GND #PWR019
+U 1 1 5EAE2FC9
+P 12450 6550
+F 0 "#PWR019" H 12450 6300 50  0001 C CNN
+F 1 "GND" H 12455 6377 50  0000 C CNN
+F 2 "" H 12450 6550 50  0001 C CNN
+F 3 "" H 12450 6550 50  0001 C CNN
+	1    12450 6550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	12450 6550 12450 6450
+Wire Wire Line
+	12450 5900 12450 5950
+$Comp
+L power:+5V #PWR015
+U 1 1 5EAE2FD5
+P 12450 5100
+F 0 "#PWR015" H 12450 4950 50  0001 C CNN
+F 1 "+5V" H 12465 5273 50  0000 C CNN
+F 2 "" H 12450 5100 50  0001 C CNN
+F 3 "" H 12450 5100 50  0001 C CNN
+	1    12450 5100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	12450 5100 12450 5200
+$Comp
+L Diode:1N4148W D9
+U 1 1 5EAE2FE0
+P 12000 5600
+F 0 "D9" V 12046 5520 50  0000 R CNN
+F 1 "1N4148W" V 11950 5950 50  0000 R CNN
+F 2 "Diode_SMD:D_SOD-123" H 12000 5425 50  0001 C CNN
+F 3 "https://www.vishay.com/docs/85748/1n4148w.pdf" H 12000 5600 50  0001 C CNN
+	1    12000 5600
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	12000 5450 12000 5200
+Wire Wire Line
+	12000 5200 12450 5200
+Connection ~ 12450 5200
+Wire Wire Line
+	12450 5200 12450 5300
+Wire Wire Line
+	12000 5750 12000 5950
+Wire Wire Line
+	12000 5950 12450 5950
+Connection ~ 12450 5950
+Wire Wire Line
+	12450 5950 12450 6050
+$Comp
+L Connector:Conn_01x03_Female J6
+U 1 1 5EAE2FF2
+P 13950 5400
+F 0 "J6" H 13978 5426 50  0000 L CNN
+F 1 "Conn_01x03_Female" H 13978 5335 50  0000 L CNN
+F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_PT-1,5-3-5.0-H_1x03_P5.00mm_Horizontal" H 13950 5400 50  0001 C CNN
+F 3 "~" H 13950 5400 50  0001 C CNN
+	1    13950 5400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	13350 5400 13750 5400
+$Comp
+L Isolator:PC817 U5
+U 1 1 5EAE2FFF
+P 11350 6150
+F 0 "U5" H 11350 6475 50  0000 C CNN
+F 1 "PC817" H 11350 6384 50  0000 C CNN
+F 2 "Package_DIP:DIP-4_W7.62mm" H 11150 5950 50  0001 L CIN
+F 3 "http://www.soselectronic.cz/a_info/resource/d/pc817.pdf" H 11350 6150 50  0001 L CNN
+	1    11350 6150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	11650 6050 11700 6050
+Wire Wire Line
+	11700 6050 11700 5200
+Wire Wire Line
+	11700 5200 12000 5200
+Connection ~ 12000 5200
+$Comp
+L Device:LED D11
+U 1 1 5EAE300D
+P 10600 6100
+F 0 "D11" V 10639 5983 50  0000 R CNN
+F 1 "LED" V 10548 5983 50  0000 R CNN
+F 2 "LED_SMD:LED_0805_2012Metric" H 10600 6100 50  0001 C CNN
+F 3 "~" H 10600 6100 50  0001 C CNN
+	1    10600 6100
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	10600 6250 10600 6400
+Wire Wire Line
+	10600 6400 10850 6400
+Connection ~ 10850 6400
+Wire Wire Line
+	10850 6400 10850 6250
+Wire Wire Line
+	10600 5550 10600 5950
+Wire Wire Line
+	10600 5550 10950 5550
+Wire Wire Line
+	10500 5550 10600 5550
+Connection ~ 10600 5550
+$Comp
+L Relay:SANYOU_SRD_Form_C K7
+U 1 1 5EAE301F
+P 12650 7650
+F 0 "K7" H 13080 7696 50  0000 L CNN
+F 1 "SANYOU_SRD_Form_C" H 13080 7605 50  0000 L CNN
+F 2 "Relay_THT:Relay_SPDT_SANYOU_SRD_Series_Form_C" H 13100 7600 50  0001 L CNN
+F 3 "http://www.sanyourelay.ca/public/products/pdf/SRD.pdf" H 12650 7650 50  0001 C CNN
+	1    12650 7650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	12850 7950 12850 8050
+Wire Wire Line
+	12850 8050 13350 8050
+Wire Wire Line
+	13350 8050 13350 7450
+Wire Wire Line
+	12750 7350 12750 7250
+$Comp
+L Device:R R13
+U 1 1 5EAE3031
+P 10950 7850
+F 0 "R13" H 11020 7896 50  0000 L CNN
+F 1 "220R" H 11020 7805 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 10880 7850 50  0001 C CNN
+F 3 "~" H 10950 7850 50  0001 C CNN
+	1    10950 7850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10950 8000 10950 8100
+Wire Wire Line
+	10950 8100 11050 8100
+$Comp
+L Transistor_BJT:PZT3904 Q7
+U 1 1 5EAE303D
+P 12350 8300
+F 0 "Q7" H 12540 8346 50  0000 L CNN
+F 1 "PZT3904" H 12540 8255 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-223" H 12550 8225 50  0001 L CIN
+F 3 "https://www.fairchildsemi.com/datasheets/2N/2N3904.pdf" H 12350 8300 50  0001 L CNN
+	1    12350 8300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR023
+U 1 1 5EAE3047
+P 10850 8500
+F 0 "#PWR023" H 10850 8250 50  0001 C CNN
+F 1 "GND" H 10855 8327 50  0000 C CNN
+F 2 "" H 10850 8500 50  0001 C CNN
+F 3 "" H 10850 8500 50  0001 C CNN
+	1    10850 8500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10850 8500 10850 8450
+Wire Wire Line
+	10850 8300 11050 8300
+Text GLabel 10500 7600 0    39   Input ~ 0
+RL8
+Wire Wire Line
+	10950 7600 10950 7700
+$Comp
+L Device:R R15
+U 1 1 5EAE3055
+P 11900 8300
+F 0 "R15" V 12107 8300 50  0000 C CNN
+F 1 "12K" V 12016 8300 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 11830 8300 50  0001 C CNN
+F 3 "~" H 11900 8300 50  0001 C CNN
+	1    11900 8300
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	11750 8300 11650 8300
+Wire Wire Line
+	12150 8300 12050 8300
+$Comp
+L power:GND #PWR025
+U 1 1 5EAE3061
+P 12450 8600
+F 0 "#PWR025" H 12450 8350 50  0001 C CNN
+F 1 "GND" H 12455 8427 50  0000 C CNN
+F 2 "" H 12450 8600 50  0001 C CNN
+F 3 "" H 12450 8600 50  0001 C CNN
+	1    12450 8600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	12450 8600 12450 8500
+Wire Wire Line
+	12450 7950 12450 8000
+$Comp
+L power:+5V #PWR021
+U 1 1 5EAE306D
+P 12450 7150
+F 0 "#PWR021" H 12450 7000 50  0001 C CNN
+F 1 "+5V" H 12465 7323 50  0000 C CNN
+F 2 "" H 12450 7150 50  0001 C CNN
+F 3 "" H 12450 7150 50  0001 C CNN
+	1    12450 7150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	12450 7150 12450 7250
+$Comp
+L Diode:1N4148W D13
+U 1 1 5EAE3078
+P 12000 7650
+F 0 "D13" V 12046 7570 50  0000 R CNN
+F 1 "1N4148W" V 11950 8000 50  0000 R CNN
+F 2 "Diode_SMD:D_SOD-123" H 12000 7475 50  0001 C CNN
+F 3 "https://www.vishay.com/docs/85748/1n4148w.pdf" H 12000 7650 50  0001 C CNN
+	1    12000 7650
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	12000 7500 12000 7250
+Wire Wire Line
+	12000 7250 12450 7250
+Connection ~ 12450 7250
+Wire Wire Line
+	12450 7250 12450 7350
+Wire Wire Line
+	12000 7800 12000 8000
+Wire Wire Line
+	12000 8000 12450 8000
+Connection ~ 12450 8000
+Wire Wire Line
+	12450 8000 12450 8100
+$Comp
+L Connector:Conn_01x03_Female J8
+U 1 1 5EAE308A
+P 13950 7450
+F 0 "J8" H 13978 7476 50  0000 L CNN
+F 1 "Conn_01x03_Female" H 13978 7385 50  0000 L CNN
+F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_PT-1,5-3-5.0-H_1x03_P5.00mm_Horizontal" H 13950 7450 50  0001 C CNN
+F 3 "~" H 13950 7450 50  0001 C CNN
+	1    13950 7450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	13350 7450 13750 7450
+$Comp
+L Isolator:PC817 U7
+U 1 1 5EAE3097
+P 11350 8200
+F 0 "U7" H 11350 8525 50  0000 C CNN
+F 1 "PC817" H 11350 8434 50  0000 C CNN
+F 2 "Package_DIP:DIP-4_W7.62mm" H 11150 8000 50  0001 L CIN
+F 3 "http://www.soselectronic.cz/a_info/resource/d/pc817.pdf" H 11350 8200 50  0001 L CNN
+	1    11350 8200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	11650 8100 11700 8100
+Wire Wire Line
+	11700 8100 11700 7250
+Wire Wire Line
+	11700 7250 12000 7250
+Connection ~ 12000 7250
+$Comp
+L Device:LED D15
+U 1 1 5EAE30A5
+P 10600 8150
+F 0 "D15" V 10639 8033 50  0000 R CNN
+F 1 "LED" V 10548 8033 50  0000 R CNN
+F 2 "LED_SMD:LED_0805_2012Metric" H 10600 8150 50  0001 C CNN
+F 3 "~" H 10600 8150 50  0001 C CNN
+	1    10600 8150
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	10600 8300 10600 8450
+Wire Wire Line
+	10600 8450 10850 8450
+Connection ~ 10850 8450
+Wire Wire Line
+	10850 8450 10850 8300
+Wire Wire Line
+	10600 7600 10600 8000
+Wire Wire Line
+	10600 7600 10950 7600
+Wire Wire Line
+	10500 7600 10600 7600
+Connection ~ 10600 7600
+Text GLabel 2450 2700 0    39   Input ~ 0
+RL1
+Wire Wire Line
+	2450 2700 2550 2700
+Text GLabel 2450 2800 0    39   Input ~ 0
+RL2
+Wire Wire Line
+	2450 2800 2550 2800
+Text GLabel 2450 2900 0    39   Input ~ 0
+RL3
+Wire Wire Line
+	2450 2900 2550 2900
+Text GLabel 2450 3100 0    39   Input ~ 0
+RL4
+Wire Wire Line
+	2450 3100 2550 3100
+Text GLabel 2450 3200 0    39   Input ~ 0
+RL5
+Wire Wire Line
+	2450 3200 2550 3200
+Text GLabel 2450 3300 0    39   Input ~ 0
+RL6
+Wire Wire Line
+	2450 3300 2550 3300
+Text GLabel 2450 3500 0    39   Input ~ 0
+RL7
+Wire Wire Line
+	2450 3500 2550 3500
+Text GLabel 2450 3600 0    39   Input ~ 0
+RL8
+Wire Wire Line
+	2450 3600 2550 3600
+Wire Wire Line
+	13000 1150 13800 1150
+Wire Wire Line
+	12800 1050 13600 1050
+Wire Wire Line
+	13600 1050 13600 1350
+Wire Wire Line
+	13600 1350 13800 1350
+Wire Wire Line
+	7900 1250 8700 1250
+Wire Wire Line
+	7700 1150 8600 1150
+Wire Wire Line
+	8600 1150 8600 1450
+Wire Wire Line
+	8600 1450 8700 1450
+Wire Wire Line
+	7850 3350 8650 3350
+Wire Wire Line
+	8500 3250 8500 3550
+Wire Wire Line
+	8500 3550 8650 3550
+Wire Wire Line
+	7650 3250 8500 3250
+Wire Wire Line
+	12950 3250 13750 3250
+Wire Wire Line
+	13550 3150 13550 3450
+Wire Wire Line
+	13550 3450 13750 3450
+Wire Wire Line
+	12750 3150 13550 3150
+Wire Wire Line
+	12950 5300 13750 5300
+Wire Wire Line
+	12750 5200 13600 5200
+Wire Wire Line
+	13600 5200 13600 5500
+Wire Wire Line
+	13600 5500 13750 5500
+Wire Wire Line
+	7850 5400 8650 5400
+Wire Wire Line
+	8450 5300 8450 5600
+Wire Wire Line
+	8450 5600 8650 5600
+Wire Wire Line
+	7650 5300 8450 5300
+Wire Wire Line
+	7850 7450 8650 7450
+Wire Wire Line
+	7650 7350 8550 7350
+Wire Wire Line
+	8550 7350 8550 7650
+Wire Wire Line
+	8550 7650 8650 7650
+Wire Wire Line
+	12950 7350 13750 7350
+Wire Wire Line
+	12750 7250 13600 7250
+Wire Wire Line
+	13600 7250 13600 7550
+Wire Wire Line
+	13600 7550 13750 7550
+NoConn ~ 3050 4600
+NoConn ~ 3150 4600
+NoConn ~ 3250 4600
+NoConn ~ 3350 4600
+NoConn ~ 3450 4600
+NoConn ~ 3550 4600
+NoConn ~ 3650 4600
+NoConn ~ 4150 4100
+NoConn ~ 4150 4000
+NoConn ~ 4150 3800
+NoConn ~ 4150 3700
+NoConn ~ 4150 3600
+NoConn ~ 4150 3500
+NoConn ~ 4150 3400
+NoConn ~ 4150 3200
+NoConn ~ 4150 3100
+NoConn ~ 4150 3000
+NoConn ~ 4150 2800
+NoConn ~ 4150 2700
+NoConn ~ 4150 2500
+NoConn ~ 4150 2400
+NoConn ~ 3550 2000
+NoConn ~ 3450 2000
+NoConn ~ 2550 3700
+NoConn ~ 2550 3800
+NoConn ~ 2550 3900
+NoConn ~ 2550 4000
+NoConn ~ 1350 4000
+$EndSCHEMATC
