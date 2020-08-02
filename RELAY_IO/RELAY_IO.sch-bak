@@ -4,12 +4,12 @@ EELAYER END
 $Descr A3 16535 11693
 encoding utf-8
 Sheet 1 1
-Title ""
+Title "RELAY Shield for Raspberry Pi"
 Date ""
 Rev ""
-Comp ""
-Comment1 ""
-Comment2 ""
+Comp "Sawadogo Ousseni design"
+Comment1 "SiteWeb: https://www.oussenisawadogo.me"
+Comment2 "Linkdin : https://www.linkedin.com/in/ousseni-sawadogo-a59099140/"
 Comment3 ""
 Comment4 ""
 $EndDescr
@@ -1657,4 +1657,32 @@ Wire Wire Line
 	13600 7250 13600 7550
 Wire Wire Line
 	13600 7550 13750 7550
+NoConn ~ 3050 4600
+NoConn ~ 3150 4600
+NoConn ~ 3250 4600
+NoConn ~ 3350 4600
+NoConn ~ 3450 4600
+NoConn ~ 3550 4600
+NoConn ~ 3650 4600
+NoConn ~ 4150 4100
+NoConn ~ 4150 4000
+NoConn ~ 4150 3800
+NoConn ~ 4150 3700
+NoConn ~ 4150 3600
+NoConn ~ 4150 3500
+NoConn ~ 4150 3400
+NoConn ~ 4150 3200
+NoConn ~ 4150 3100
+NoConn ~ 4150 3000
+NoConn ~ 4150 2800
+NoConn ~ 4150 2700
+NoConn ~ 4150 2500
+NoConn ~ 4150 2400
+NoConn ~ 3550 2000
+NoConn ~ 3450 2000
+NoConn ~ 2550 3700
+NoConn ~ 2550 3800
+NoConn ~ 2550 3900
+NoConn ~ 2550 4000
+NoConn ~ 1350 4000
 $EndSCHEMATC
